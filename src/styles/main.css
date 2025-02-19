@@ -6,11 +6,20 @@ body {
     color: #333;
 }
 
+h1, form, input, textarea, button, .note, .note h3, .note p {
+  font-family: "Poppins", sans-serif;
+}
+
 h1 {
+    font-size: 30px;
     text-align: center;
-    font-size: 24px;
-    font-weight: 600;
+    font-weight: 800;
     color: #007bff;
+    background-color: #fff;
+    padding: 20px;
+    width: 600px;
+    margin: 0 auto;
+    border-radius: 10px;
 }
 
 form {
@@ -45,26 +54,45 @@ button {
 }
 
 #notes-list {
-    margin-top: 20px;
-    max-width: 600px;
-    margin: auto;
+  margin-top: 20px;
+  max-width: 900px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 15px; 
 }
 
 .note {
-    background: white;
-    padding: 15px;
-    margin-bottom: 15px;
-    border-left: 5px solid #007bff;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 10px;
-    width: 100%;
-    max-width: 100%;
-    overflow: hidden;
+  background: white;
+  padding: 15px;
+  border-left: 5px solid #007bff;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
 }
+
+.note:hover {
+  transform: scale(1.02);
+}
+
+@media (max-width: 768px) {
+  #notes-list {
+      grid-template-columns: repeat(2, 1fr); 
+  }
+}
+
+@media (max-width: 480px) {
+  #notes-list {
+      grid-template-columns: repeat(1, 1fr); 
+  }
+}
+
 
 .note-content {
     flex: 1;
@@ -72,12 +100,14 @@ button {
     white-space: normal; 
     word-wrap: break-word;
     overflow-wrap: break-word;
+    gap: 30px;
 }
 
 .note h3 {
     margin: 0;
     font-size: 18px;
     font-weight: 600;
+    padding-right: 60px;
 }
 
 .note p {
@@ -87,8 +117,8 @@ button {
     word-wrap: break-word;
     overflow-wrap: break-word;
     max-width: 100%;
+    padding-right: 30px;
 }
-
 
 .delete-btn {
     background: none;
@@ -100,6 +130,9 @@ button {
         color 0.3s ease-in-out,
         transform 0.2s ease-in-out;
     flex-shrink: 0;
+    position: absolute;
+    top: 1px;
+    right: 20px;
 }
 
 .loader {
