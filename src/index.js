@@ -1,4 +1,4 @@
-import "./styles/main.css"; // Mengimpor file CSS agar bisa diproses Webpack
-import "./scripts/main.js"; // Memulai aplikasi utama
+import "./styles/main.css";
+import "./scripts/main.js";
 
 console.log("Aplikasi Notes App dimulai...");
