@@ -21,7 +21,7 @@ h1 {
     font-size: 30px;
     text-align: center;
     font-weight: 800;
-    color: #007bff;
+    color: #104379;
     background-color: #fff;
     padding: 20px;
     width: 600px;
@@ -52,7 +52,7 @@ textarea {
 
 button {
     padding: 12px;
-    background-color: #007bff;
+    background-color: #104379;
     color: white;
     border: none;
     border-radius: 5px;
@@ -73,7 +73,7 @@ button {
 .note {
     background: white;
     padding: 15px;
-    border-left: 5px solid #007bff;
+    border-left: 5px solid #104379;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out;
     display: flex;
@@ -83,8 +83,8 @@ button {
     width: 90%;
     overflow: hidden;
     position: relative;
+    border-radius: 5px;
 }
-
 
 .note:hover {
     transform: scale(1.02);
@@ -138,14 +138,14 @@ button {
     border: none;
     cursor: pointer;
     font-size: 18px;
-    color: #d9534f;
+    color: #c9100a;
     transition:
         color 0.3s ease-in-out,
         transform 0.2s ease-in-out;
     flex-shrink: 0;
     position: absolute;
     top: 1px;
-    right: 20px;
+    right: 1px;
 }
 
 .loader {
