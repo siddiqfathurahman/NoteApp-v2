@@ -1,6 +1,6 @@
 import { fetchNotes, deleteNote, addNote } from "./api.js";
 import gsap from "gsap";
-import Swal from "sweetalert2"; 
+import Swal from "sweetalert2";
 
 export const renderNotes = async () => {
     const notesList = document.getElementById("notes-list");
@@ -41,7 +41,7 @@ window.handleAddNote = async (event) => {
 
     if (title === "" || body === "") {
         Swal.fire({
-            icon: "error",
+            icon: "warning",
             title: "Oops...",
             text: "Judul dan isi catatan tidak boleh kosong!",
         });
@@ -59,7 +59,7 @@ window.handleAddNote = async (event) => {
             title: "Berhasil!",
             text: "Catatan berhasil ditambahkan.",
             timer: 1500,
-            showConfirmButton: false
+            showConfirmButton: false,
         });
 
         renderNotes();
@@ -100,7 +100,7 @@ window.handleDelete = async (id, button) => {
                     title: "Dihapus!",
                     text: "Catatan berhasil dihapus.",
                     timer: 1500,
-                    showConfirmButton: false
+                    showConfirmButton: false,
                 });
                 renderNotes();
             } catch (error) {
